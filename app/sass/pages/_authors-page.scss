@@ -1,0 +1,65 @@
+.authors-page {
+
+  .white-bg {
+    padding-top: 75px;
+    padding-bottom: 90px;
+  }
+
+  &__caption {
+    position: relative;
+    width: 100%;
+
+    &_text {
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: bold;
+      font-size: 45px;
+      line-height: 130%;
+      color: $dark-color;
+      font-family: Montserrat Alternates;
+      padding: 0 30px;
+      background-color: #fff;
+    }
+
+    &_decor {
+      z-index: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      height: 9px;
+      border-top: 2px solid $orange-color;
+      border-bottom: 2px solid $orange-color;
+
+      &:before {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 9px;
+        border-top: 2px solid $orange-color;
+        border-bottom: 2px solid $orange-color;
+        content: '';
+        top: calc(100% + 7px);
+      }
+
+      &:after {
+        top: -9px;
+        content: '';
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $orange-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.authors {
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 90px;
+
+  .author {
+    width: 24%;
+    margin: 0 .5%;
+    display: block;
+
+    &__desc {
+      position: relative;
+      font-family: Montserrat;
+      color: $dark-color;
+      font-size: 18px;
+      margin-bottom: 43px;
+
+      &_bold {
+        font-weight: 600;
+      }
+
+      &_text {
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -14px;
+        left: 0;
+        height: 4px;
+        width: 76px;
+        background-color: $orange-color;
+      }
+    }
+
+    &__img {
+      $width: 282px;
+      overflow: hidden;
+      width: $width;
+      height: $width;
+      max-width: 100%;
+      @include flex-center();
+
+      &_image {
+        @include transition-ease;
+        width: 100%;
+        display: block;
+      }
+    }
+
+    @include on-event {
+
+      .author__img_image {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

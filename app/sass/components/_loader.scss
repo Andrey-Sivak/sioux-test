@@ -1,0 +1,16 @@
+.loader {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  @include flex-center();
+  background-image: linear-gradient(230deg, $bronze-color, #fff);
+  opacity: 0;
+  @include transition-ease;
+
+  &.active {
+    opacity: 1;
+  }
+}

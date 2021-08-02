@@ -14,11 +14,109 @@
   <link rel="stylesheet" href="./dist/css/main.css">
   <title>Document</title>
 </head>
-<body>
+<body class="authors-page">
 
-<div class="top-phone">
+<div class="loader active">
+  <div class="loadingio-spinner-spinner-rl7w6qbl47d"><div class="ldio-4khtpk1mo8v">
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div></div>
+  <style type="text/css">
+    @keyframes ldio-4khtpk1mo8v {
+      0% { opacity: 1 }
+      100% { opacity: 0 }
+    }
+    .ldio-4khtpk1mo8v div {
+      left: 98.735px;
+      top: 42.315px;
+      position: absolute;
+      animation: ldio-4khtpk1mo8v linear 2.127659574468085s infinite;
+      background: #F16439;
+      width: 19.53px;
+      height: 19.53px;
+      border-radius: 9.765px / 9.765px;
+      transform-origin: 9.765px 66.185px;
+    }.ldio-4khtpk1mo8v div:nth-child(1) {
+       transform: rotate(0deg);
+       animation-delay: -1.9342359767891684s;
+       background: #F16439;
+     }.ldio-4khtpk1mo8v div:nth-child(2) {
+        transform: rotate(32.72727272727273deg);
+        animation-delay: -1.7408123791102514s;
+        background: #F16439;
+      }.ldio-4khtpk1mo8v div:nth-child(3) {
+         transform: rotate(65.45454545454545deg);
+         animation-delay: -1.5473887814313347s;
+         background: #F16439;
+       }.ldio-4khtpk1mo8v div:nth-child(4) {
+          transform: rotate(98.18181818181819deg);
+          animation-delay: -1.3539651837524178s;
+          background: #F16439;
+        }.ldio-4khtpk1mo8v div:nth-child(5) {
+           transform: rotate(130.9090909090909deg);
+           animation-delay: -1.1605415860735009s;
+           background: #F16439;
+         }.ldio-4khtpk1mo8v div:nth-child(6) {
+            transform: rotate(163.63636363636363deg);
+            animation-delay: -0.9671179883945842s;
+            background: #F16439;
+          }.ldio-4khtpk1mo8v div:nth-child(7) {
+             transform: rotate(196.36363636363637deg);
+             animation-delay: -0.7736943907156674s;
+             background: #F16439;
+           }.ldio-4khtpk1mo8v div:nth-child(8) {
+              transform: rotate(229.0909090909091deg);
+              animation-delay: -0.5802707930367504s;
+              background: #F16439;
+            }.ldio-4khtpk1mo8v div:nth-child(9) {
+               transform: rotate(261.8181818181818deg);
+               animation-delay: -0.3868471953578337s;
+               background: #F16439;
+             }.ldio-4khtpk1mo8v div:nth-child(10) {
+                transform: rotate(294.54545454545456deg);
+                animation-delay: -0.19342359767891684s;
+                background: #F16439;
+              }.ldio-4khtpk1mo8v div:nth-child(11) {
+                 transform: rotate(327.27272727272725deg);
+                 animation-delay: 0s;
+                 background: #F16439;
+               }
+    .loadingio-spinner-spinner-rl7w6qbl47d {
+      width: 217px;
+      height: 217px;
+      display: block;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    .ldio-4khtpk1mo8v {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateZ(0) scale(1);
+      backface-visibility: hidden;
+      transform-origin: 0 0; /* see note above */
+    }
+    .ldio-4khtpk1mo8v div { box-sizing: content-box; }
+  </style>
+</div>
+
+<div class="top-phone orange-bg">
   <img src="./dist/img/header-phone.svg" alt="img">
 </div>
+
+<svg width="818"
+     height="818"
+     class="bg-big-circle"
+     viewBox="0 0 818 818"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <circle cx="409" cy="409" r="409" fill="url(#paint0_linear)"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="409" y1="0" x2="409" y2="818" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDB778"/>
+      <stop offset="0.520827" stop-color="#BEA479" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
 
 <header class="container header">
   <a href="./index.html" class="header__logo">
@@ -27,10 +125,10 @@
 
   <nav class="menu">
     <ul class="menu__wrap">
-      <li class="menu__item">
+      <li class="menu__item active">
         <a href="./news.html" class="menu__item_link">новости и релизы</a>
       </li>
-      <li class="menu__item active">
+      <li class="menu__item">
         <a href="./authors.html" class="menu__item_link">авторы и артисты</a>
       </li>
       <li class="menu__item">
@@ -40,12 +138,160 @@
   </nav>
 </header>
 
-<main class="container">
-  
+<main>
+
+  <div class="white-bg">
+    <span class="white-bg__border top"></span>
+    <span class="white-bg__border bottom"></span>
+
+    <div class="authors-page__caption">
+      <p class="authors-page__caption_text">авторы</p>
+      <span class="authors-page__caption_decor"></span>
+    </div>
+
+    <div class="container authors">
+      <a href="./single-author.html" class="author">
+        <div class="author__desc">
+          <p class="author__desc_bold">Артемьев</p>
+          <p class="author__desc_text">Эдуард Николаевич</p>
+        </div>
+        <div class="author__img">
+          <img src="./dist/img/author-1.png"
+               alt="img"
+               class="author__img_image"
+               loading="lazy">
+        </div>
+      </a>
+
+      <a href="./single-author.html" class="author">
+        <div class="author__desc">
+          <p class="author__desc_bold">Гладков</p>
+          <p class="author__desc_text">Геннадий Игоревич</p>
+        </div>
+        <div class="author__img">
+          <img src="./dist/img/author-2.png"
+               alt="img"
+               class="author__img_image"
+               loading="lazy">
+        </div>
+      </a>
+
+      <a href="./single-author.html" class="author">
+        <div class="author__desc">
+          <p class="author__desc_bold">Зацепин</p>
+          <p class="author__desc_text">Александр Сергеевич</p>
+        </div>
+        <div class="author__img">
+          <img src="./dist/img/author-3.png"
+               alt="img"
+               class="author__img_image"
+               loading="lazy">
+        </div>
+      </a>
+
+      <a href="./single-author.html" class="author">
+        <div class="author__desc">
+          <p class="author__desc_bold">Таривердиев</p>
+          <p class="author__desc_text">Микаэл Леонович</p>
+        </div>
+        <div class="author__img">
+          <img src="./dist/img/author-4.png"
+               alt="img"
+               class="author__img_image"
+               loading="lazy">
+        </div>
+      </a>
+    </div>
+
+    <div class="authors-page__caption">
+      <p class="authors-page__caption_text">исполнители</p>
+      <span class="authors-page__caption_decor"></span>
+    </div>
+
+    <div class="container authors">
+      <a href="./single-author.html" class="author">
+        <div class="author__desc">
+          <p class="author__desc_bold">ВИА «ТЕМП-77»</p>
+        </div>
+        <div class="author__img">
+          <img src="./dist/img/performer-1.png"
+               alt="img"
+               class="author__img_image"
+               loading="lazy">
+        </div>
+      </a>
+
+      <a href="./single-author.html" class="author">
+        <div class="author__desc">
+          <p class="author__desc_bold">Группа «Разлученные»</p>
+        </div>
+        <div class="author__img">
+          <img src="./dist/img/performer-2.png"
+               alt="img"
+               class="author__img_image"
+               loading="lazy">
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container form">
+    <div class="form__info">
+      <p class="form__info_caption">напишите</p>
+      <p class="form__info_text">Если у вас есть вопросы или предложения свяжитесь с нами и вы получите оперативный ответ </p>
+      <a href="tel:+79013891858" class="form__info_link phone">+7 901 389 18 58</a>
+      <a href="mailto:mail@siouxmusic.ru" class="form__info_link email">mail@siouxmusic.ru</a>
+    </div>
+    <form action="#" class="form__form">
+      <div class="form__form_inputs">
+        <div class="form__field">
+          <label for="FName" class="form__field_label">
+            <input type="text"
+                   name="FName"
+                   id="FName"
+                   placeholder="как вас зовут?">
+          </label>
+        </div>
+        <div class="form__field">
+          <label for="email" class="form__field_label">
+            <input type="text"
+                   name="email"
+                   id="email"
+                   placeholder="e-mail">
+          </label>
+        </div>
+        <div class="form__field">
+          <label for="phone" class="form__field_label">
+            <input type="text"
+                   name="phone"
+                   id="phone"
+                   placeholder="телефон">
+          </label>
+        </div>
+      </div>
+      <div class="form__form_textarea">
+        <div class="form__field">
+          <label for="message" class="form__field_label">
+          <textarea name="message"
+                    id="message"
+                    placeholder="ваше сообщение"
+                    rows="1"></textarea>
+          </label>
+        </div>
+      </div>
+      <div class="form__form_footer">
+        <button class="btn">отправить</button>
+        <p class="form__form_note">Нажимая кнопку, вы соглашаетесь <br>с <a href="#" class="orange">Политикой обработки персональных данных</a></p>
+      </div>
+    </form>
+  </div>
 </main>
 
-<footer class="container footer">
-
+<footer class="footer bronze-bg">
+  <div class="container">
+    <p class="footer__copy">&copy; 2021 Shining Sioux Record</p>
+    <p class="footer__dev">Разработка сайта: hardwork.ru</p>
+  </div>
 </footer>
 
 </body>
