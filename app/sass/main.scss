@@ -12,7 +12,13 @@
 @import "includes/header";
 
 @import "components/form";
+@import "components/menu";
+@import "components/single-page";
+@import "components/cards";
 @import "components/popup";
 @import "components/tooltips";
 
 @import "pages/home-page";
+@import "pages/news-page";
+@import "pages/contacts-page";
+@import "pages/authors-page";

@@ -1,0 +1,22 @@
+.footer {
+  text-align: center;
+  height: 367px;
+  padding-bottom: 55px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: -200px;
+  font-family: Montserrat;
+
+  &__copy {
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+  }
+
+  &__dev {
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 400;
+  }
+}

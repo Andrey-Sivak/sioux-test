@@ -1,6 +1,11 @@
 body {
-  background-color: #414650;
-  position: relative;
+  background-color: $dark-color;
+  background-image: url('../../img/main-top-bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  background-blend-mode: overlay;
+  padding-top: 112px;
 }
 
 .container {
@@ -12,4 +17,72 @@ body {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.white-bg {
+  background-color: #fff;
+  position: relative;
+
+  &__border {
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../img/white-bg-border-top.svg');
+
+    &.top {
+      top: -15px;
+    }
+
+    &.bottom {
+      bottom: -15px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.btn {
+  background-color: $orange-color;
+  text-align: center;
+  color: #fff;
+  padding: 12px 0;
+  border-radius: 50px;
+  text-transform: uppercase;
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 140%;
+  @include transition-ease;
+  border: none;
+
+  @include on-event {
+    background-color: rgba(241, 100, 57, 0.7);
+  }
+}
+
+.green {
+  color: $green-color;
+}
+
+.orange {
+  color: $orange-color;
+}
+
+.bronze {
+  color: $bronze-color;
+}
+
+.green-bg {
+  background-color: $green-color;
+}
+
+.orange-bg {
+  background-color: $orange-color;
+}
+
+.bronze-bg {
+  background-color: $bronze-color;
 }

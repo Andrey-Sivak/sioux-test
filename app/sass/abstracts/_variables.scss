@@ -1,8 +1,16 @@
 $breakpoints: (
         small: 767px,
         medium: 992px,
-        large: 1168px,
+        large: 1230px,
         huge: 1480px
 );
 
-$container: 1280px;
+$container: 1200px;
+
+$dark-color: #292929;
+$green-color: #479E7F;
+$orange-color: #F16439;
+$bronze-color: #BEA479;
+
+$montserrat-alt: 'Montserrat Alternates', sans-serif;
+$montserrat: 'Montserrat', sans-serif;

@@ -1,0 +1,142 @@
+.form {
+  margin-top: 80px;
+  //margin-bottom: -200px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 44px 55px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__info {
+    max-width: 375px;
+
+    &_caption {
+      margin-bottom: 30px;
+      color: $dark-color;
+      font-family: Montserrat Alternates;
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 100%;
+    }
+
+    &_text {
+      margin-bottom: 30px;
+      font-family: Montserrat;
+      font-size: 18px;
+      line-height: 170%;
+      color: $dark-color;
+    }
+
+    &_link {
+      display: block;
+      padding-left: 32px;
+      background-repeat: no-repeat;
+      background-position: left center;
+      font-size: 18px;
+      line-height: 150%;
+      font-family: Montserrat;
+
+      @include on-event {
+        text-decoration: underline;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+
+      &.phone {
+        background-image: url('../../img/form-phone.svg');
+        background-size: 22px;
+      }
+
+      &.email {
+        background-image: url('../../img/form-email.svg');
+        background-size: 20px;
+      }
+    }
+  }
+
+  &__form {
+    max-width: 636px;
+    width: 100%;
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 28px;
+
+    &_inputs {
+      width: 48%;
+    }
+
+    &_textarea {
+      width: 48%;
+    }
+
+    &_footer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      & .btn {
+        width: 134px;
+        margin-right: 36px;
+      }
+    }
+
+    &_note {
+      font-weight: 400;
+      font-family: Montserrat;
+      color: $dark-color;
+      font-size: 10px;
+      line-height: 150%;
+
+      & a {
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  &__field {
+    width: 100%;
+    margin-bottom: 30px;
+
+    &_label {
+      width: 100%;
+      display: block;
+
+      & input,
+      & textarea {
+        width: 100%;
+        display: block;
+        padding-bottom: 8px;
+        font-size: 18px;
+        line-height: 150%;
+        font-family: Montserrat;
+        color: $dark-color;
+        border-bottom: 1px solid #BEA479;
+        @include transition-ease;
+
+        &:focus {
+          border-bottom-color: #F16439;
+        }
+
+        &::placeholder {
+          display: block!important;
+          color: rgba(41, 41, 41, 0.6);
+          font-size: 18px;
+          line-height: 150%;
+        }
+      }
+
+      & textarea {
+        resize: vertical;
+      }
+    }
+  }
+}

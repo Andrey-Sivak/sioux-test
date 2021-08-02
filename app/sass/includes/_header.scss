@@ -1,0 +1,41 @@
+.top-phone {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  top: 0;
+  border-radius: 0px 0px 32px 32px;
+  padding: 0 18px 14px 14px;
+  height: 160px;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+
+  @media(min-width: 1200px) {
+    right: calc((99vw - 1200px) / 2);
+  }
+}
+
+.bg-big-circle {
+  position: absolute;
+  top: 106px;
+  right: -11.4%;
+}
+
+.header {
+  position: relative;
+  padding-bottom: 30px;
+  @include flex-center();
+
+  &__logo {
+    width: 206px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+
+    & img {
+      max-width: 100%;
+    }
+  }
+}

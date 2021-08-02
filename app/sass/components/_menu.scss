@@ -1,0 +1,38 @@
+.menu {
+  width: 100%;
+
+  &__wrap {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  &__item {
+
+    &_link {
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      font-family: Montserrat Alternates;
+      @include transition-ease;
+      display: block;
+
+      @include on-event {
+        text-decoration: underline;
+        color: $orange-color;
+      }
+    }
+
+    &.active {
+
+      & .menu__item_link {
+        color: $bronze-color;
+      }
+    }
+  }
+}
