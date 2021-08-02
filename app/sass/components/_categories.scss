@@ -1,0 +1,56 @@
+.news-page {
+
+  & .categories {
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 67px;
+  }
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    font-family: Montserrat Alternates;
+    display: flex;
+    align-items: center;
+
+    &_text {
+      margin-left: 5px;
+      font-size: 16px;
+      line-height: 100%;
+      color: #fff;
+      font-weight: 400;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        bottom: -5px;
+        background-color: $orange-color;
+        @include transition-ease;
+      }
+    }
+
+    @include on-event {
+
+      .categories__item_text:before {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: $bronze-color;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 35px;
+    }
+  }
+}

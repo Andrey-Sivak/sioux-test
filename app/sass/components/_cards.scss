@@ -1,7 +1,14 @@
-.news-page {
+.single {
 
   & .cards {
     margin-top: 100px;
+  }
+}
+
+.news-page {
+
+  & .card {
+    margin-bottom: 72px;
   }
 }
 
@@ -19,10 +26,6 @@
   width: $width;
 
   @include on-event {
-
-    /*.card__img_image {
-      transform: scale(1.1);
-    }*/
 
     .card__img {
       border-color: $orange-color;
