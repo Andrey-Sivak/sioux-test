@@ -107,6 +107,7 @@
   &__img {
     max-width: 588px;
     position: relative;
+    padding-bottom: 140px;
 
     & img {
       width: 100%;
@@ -115,7 +116,7 @@
     &_stripes {
       position: absolute;
       left: 0;
-      top: calc(100% + 90px);
+      bottom: 0;
       height: 20px;
       border-top: 1px solid $orange-color;
       border-bottom: 1px solid $orange-color;
@@ -128,7 +129,7 @@
       &:before {
         border-bottom: 1px solid $orange-color;
         height: 20px;
-        bottom: -44px;
+        top: -66px;
       }
 
       &:after {
@@ -144,5 +145,109 @@
         border-top: 1px solid $orange-color;
       }
     }
+  }
+}
+
+.page-lists {
+  margin-top: 64px;
+}
+
+.page-list {
+  border: 3px solid #BEA479;
+  padding: 27px 25px 27px 40px;
+  margin-bottom: 22px;
+
+  &.active {
+
+    .page-list__header {
+      margin-bottom: 49px;
+
+      &_text {
+
+        &:after {
+          transform: rotate(45deg) translateY(-37%) translateX(-36%);
+        }
+      }
+    }
+
+    .page-list__body {
+      max-height: 1000px;
+      opacity: 1;
+    }
+
+    .page-list__item {
+      max-height: 100px;
+      padding-bottom: 5px;
+      opacity: 1;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 0;
+    @include transition-ease;
+
+    &_text {
+      font-family: Montserrat Alternates;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 130%;
+      color: $dark-color;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        background-color: $bronze-color;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 44px;
+        height: 44px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        right: 0;
+        background-image: url('../../img/list-header-show.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: initial;
+        @include transition-ease;
+      }
+    }
+  }
+
+  &__body {
+    @include transition-ease;
+    max-height: 0px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  &__item {
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 400;
+    color: $dark-color;
+    width: 50%;
+    padding-right: 1%;
+    opacity: 0;
+    transition-property: max-height, padding-bottom;
+    transition-delay: .3s;
+    transition-timing-function: ease-in;
   }
 }

@@ -6,5 +6,5 @@ import './slick.min';
 
 window.addEventListener('load', function () {
 
-    console.log(12);
+
 });
