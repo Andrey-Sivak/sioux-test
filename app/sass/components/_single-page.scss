@@ -74,9 +74,9 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      height: 20px;
-      border-top: 1px solid $orange-color;
-      border-bottom: 1px solid $orange-color;
+      height: 24px;
+      border-top: 2px solid $orange-color;
+      border-bottom: 2px solid $orange-color;
       right: -15px;
 
       @media(min-width: 1200px) {
@@ -84,14 +84,15 @@
       }
 
       &:before {
-        border-bottom: 1px solid $orange-color;
-        height: 20px;
+        box-sizing: border-box;
+        border-bottom: 2px solid $orange-color;
+        height: 24px;
         top: -66px;
       }
 
       &:after {
-        height: 1px;
-        top: -22px;
+        height: 0px;
+        top: -24px;
       }
 
       &:after,
@@ -99,7 +100,7 @@
         content: '';
         position: absolute;
         width: 100%;
-        border-top: 1px solid $orange-color;
+        border-top: 2px solid $orange-color;
       }
     }
   }

@@ -41,6 +41,10 @@
   top: 106px;
   right: -11.4%;
   z-index: -1;
+
+  @media(min-width: 1455px) {
+    right: 0;
+  }
 }
 
 .header {

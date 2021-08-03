@@ -247,7 +247,8 @@ body {
   background-position: center top;
   background-size: contain;
   background-blend-mode: overlay;
-  padding-top: 112px; }
+  padding-top: 112px;
+  scroll-behavior: smooth; }
 
 .container {
   max-width: 1200px;
@@ -390,6 +391,9 @@ body {
   top: 106px;
   right: -11.4%;
   z-index: -1; }
+  @media (min-width: 1455px) {
+    .bg-big-circle {
+      right: 0; } }
 
 .header {
   position: relative;
@@ -571,7 +575,8 @@ body {
           font-size: 18px;
           line-height: 150%; }
       .form__field_label textarea {
-        resize: vertical; }
+        resize: vertical;
+        overflow: hidden; }
 
 .loader {
   z-index: 1000;
@@ -851,25 +856,26 @@ body {
       position: absolute;
       left: 0;
       bottom: 0;
-      height: 20px;
-      border-top: 1px solid #F16439;
-      border-bottom: 1px solid #F16439;
+      height: 24px;
+      border-top: 2px solid #F16439;
+      border-bottom: 2px solid #F16439;
       right: -15px; }
       @media (min-width: 1200px) {
         .page-content__img_stripes {
           right: calc((100vw - 1200px) / -2); } }
       .page-content__img_stripes:before {
-        border-bottom: 1px solid #F16439;
-        height: 20px;
+        box-sizing: border-box;
+        border-bottom: 2px solid #F16439;
+        height: 24px;
         top: -66px; }
       .page-content__img_stripes:after {
-        height: 1px;
-        top: -22px; }
+        height: 0px;
+        top: -24px; }
       .page-content__img_stripes:after, .page-content__img_stripes:before {
         content: '';
         position: absolute;
         width: 100%;
-        border-top: 1px solid #F16439; }
+        border-top: 2px solid #F16439; }
 
 .page-lists {
   margin-top: 64px; }
