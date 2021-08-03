@@ -9,9 +9,30 @@
   display: flex;
   align-items: flex-end;
   cursor: pointer;
+  @include transition-ease;
 
   @media(min-width: 1200px) {
     right: calc((99vw - 1200px) / 2);
+  }
+
+  & .hover {
+    display: none;
+  }
+
+  & .img {
+    display: block;
+  }
+
+  @include on-event {
+    background-color: #fff;
+
+    & .img {
+      display: none;
+    }
+
+    & .hover {
+      display: block;
+    }
   }
 }
 
@@ -19,6 +40,7 @@
   position: absolute;
   top: 106px;
   right: -11.4%;
+  z-index: -1;
 }
 
 .header {

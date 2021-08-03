@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./dist/css/main.css">
   <title>Document</title>
 </head>
-<body>
+<body class="home">
 
 <div class="loader active">
   <div class="loadingio-spinner-spinner-rl7w6qbl47d"><div class="ldio-4khtpk1mo8v">
@@ -99,9 +99,25 @@
   </style>
 </div>
 
-<div class="top-phone">
-  <img src="./dist/img/header-phone.svg" alt="img">
+<div class="top-phone orange-bg">
+  <img src="./dist/img/header-phone.svg" alt="img" class="img">
+  <img src="./dist/img/header-phone-hover.svg" alt="img" class="hover">
 </div>
+
+<svg width="818"
+     height="818"
+     class="bg-big-circle"
+     viewBox="0 0 818 818"
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <circle cx="409" cy="409" r="409" fill="url(#paint0_linear)"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="409" y1="0" x2="409" y2="818" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDB778"/>
+      <stop offset="0.520827" stop-color="#BEA479" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
 
 <header class="container header">
   <a href="./index.html" class="header__logo">
@@ -110,7 +126,7 @@
 
   <nav class="menu">
     <ul class="menu__wrap">
-      <li class="menu__item active">
+      <li class="menu__item">
         <a href="./news.html" class="menu__item_link">новости и релизы</a>
       </li>
       <li class="menu__item">
@@ -123,12 +139,278 @@
   </nav>
 </header>
 
-<main class="container">
+<main>
 
+  <div class="container home__content">
+    <div class="home__content_text">
+      <p class="bold">Более 15 лет мы эксклюзивно представляем ведущих советских и российских авторов музыки</p>
+      <p>к популярным кино и телефильмам, спектаклям и мюзиклам, мультфильмам и детским программам</p>
+    </div>
+    <div class="home__content_img">
+      <img src="./dist/img/main-home-img.svg" alt="img">
+    </div>
+  </div>
+
+  <div class="container home__main">
+    <div class="categories">
+      <a href="#" class="categories__item active">все</a>
+      <a href="#" class="categories__item">
+        <img src="./dist/img/relise-icon.svg" class="categories__item_icon relies" alt="img">
+        <span class="categories__item_text">релизы</span>
+      </a>
+      <a href="#" class="categories__item">
+        <img src="./dist/img/afisha-icon.svg" class="categories__item_icon afisha" alt="img">
+        <span class="categories__item_text">афиша</span>
+      </a>
+      <a href="#" class="categories__item">
+        <img src="./dist/img/event-icon.svg" class="categories__item_icon event" alt="img">
+        <span class="categories__item_text">события</span>
+      </a>
+    </div>
+
+    <div class="cards">
+      <a href="./single-news.html" class="card">
+        <div class="card__img">
+          <img src="./dist/img/img-1-1.png"
+               alt="img"
+               class="card__img_image"
+               loading="lazy">
+        </div>
+        <div class="card__bottom">
+          <span class="card__bottom_category orange-bg">релиз</span>
+          <p class="card__bottom_author">Александр Зацепин</p>
+          <p class="card__bottom_title">Оригинальная Музыка К Кинофильмам</p>
+          <p class="card__bottom_note">7xLP, Цветные Пластинки)</p>
+        </div>
+      </a>
+
+      <a href="./single-news.html" class="card">
+        <div class="card__img">
+          <img src="./dist/img/img-1-big.png"
+               alt="img"
+               class="card__img_image"
+               loading="lazy">
+        </div>
+        <div class="card__bottom">
+          <span class="card__bottom_category orange-bg">релиз</span>
+          <p class="card__bottom_author">Геннадий Гладков</p>
+          <p class="card__bottom_title">Музыка К Мультфильму «Разлученные»</p>
+          <p class="card__bottom_note">(Стихи Давида Самойлова)</p>
+        </div>
+      </a>
+
+      <a href="./single-news.html" class="card">
+        <div class="card__img">
+          <img src="./dist/img/img-1-2.png"
+               alt="img"
+               class="card__img_image"
+               loading="lazy">
+        </div>
+        <div class="card__bottom">
+          <span class="card__bottom_category orange-bg">релиз</span>
+          <p class="card__bottom_author">Геннадий Гладков</p>
+          <p class="card__bottom_title">Симфонические пьесы</p>
+          <p class="card__bottom_note">(Государственный симфонический оркестр им. Е. Ф. Светланова. Дерижер Владимир Юровский)</p>
+        </div>
+      </a>
+
+      <a href="./single-news.html" class="card">
+        <div class="card__img">
+          <img src="./dist/img/img-1-4.png"
+               alt="img"
+               class="card__img_image"
+               loading="lazy">
+        </div>
+        <div class="card__bottom">
+          <span class="card__bottom_category green-bg">афиша</span>
+          <p class="card__bottom_author">андрей семенов</p>
+          <p class="card__bottom_title">Концерт Андрея семенова «пятнадцать собак»</p>
+        </div>
+      </a>
+    </div>
+    <a href="./news.html" class="btn white more">все релизы и события</a>
+  </div>
+
+  <div class="white-bg">
+    <span class="white-bg__border top"></span>
+    <span class="white-bg__border bottom"></span>
+
+    <p class="home__text">Все мы знаем такие фильмы как:  Обыкновенное чудо, Пока безумствует мечта, Жил-был <br>настройщик, Сватовство гусара, Благочестивая Марта,  Дульсинея Тобосская, Таинственный <br>старик, Вакансия, Берегите мужчин!, Не хочу быть взрослым и многие другие <br>Трудно не знать авторов, которые написали к ним музыку</p>
+    <div class="container">
+      <div class="authors">
+        <span class="decor"></span>
+        <a href="./single-author.html" class="author">
+          <div class="author__desc">
+            <p class="author__desc_bold">Артемьев</p>
+            <p class="author__desc_text">Эдуард Николаевич</p>
+          </div>
+          <div class="author__img">
+            <img src="./dist/img/author-1.png"
+                 alt="img"
+                 class="author__img_image"
+                 loading="lazy">
+          </div>
+        </a>
+
+        <a href="./single-author.html" class="author">
+          <div class="author__desc">
+            <p class="author__desc_bold">Гладков</p>
+            <p class="author__desc_text">Геннадий Игоревич</p>
+          </div>
+          <div class="author__img">
+            <img src="./dist/img/author-2.png"
+                 alt="img"
+                 class="author__img_image"
+                 loading="lazy">
+          </div>
+        </a>
+
+        <a href="./single-author.html" class="author">
+          <div class="author__desc">
+            <p class="author__desc_bold">Зацепин</p>
+            <p class="author__desc_text">Александр Сергеевич</p>
+          </div>
+          <div class="author__img">
+            <img src="./dist/img/author-3.png"
+                 alt="img"
+                 class="author__img_image"
+                 loading="lazy">
+          </div>
+        </a>
+
+        <a href="./single-author.html" class="author">
+          <div class="author__desc">
+            <p class="author__desc_bold">Таривердиев</p>
+            <p class="author__desc_text">Микаэл Леонович</p>
+          </div>
+          <div class="author__img">
+            <img src="./dist/img/author-4.png"
+                 alt="img"
+                 class="author__img_image"
+                 loading="lazy">
+          </div>
+        </a>
+
+        <div class="authors__footer">
+          <h3 class="authors__footer_text">авторы</h3>
+          <a href="./authors.html" class="back">
+            <p class="back__text">все новости и релизы</p>
+            <span class="back__icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bronze-bg">
+    <div class="container directions">
+      <p class="directions__caption">основные <br>направления</p>
+      <div class="directions__content">
+        <div class="directions__icons">
+
+          <div class="directions__icon">
+            <div class="directions__icon_img">
+              <img src="./dist/img/directions-icon-1.svg"
+                   alt="img"
+                   loadeng="lazy">
+            </div>
+            <p class="directions__icon_text">Менеджмент <br>и продвижение авторов и артистов</p>
+          </div>
+
+          <div class="directions__icon">
+            <div class="directions__icon_img">
+              <img src="./dist/img/directions-icon-2.svg"
+                   alt="img"
+                   loadeng="lazy">
+            </div>
+            <p class="directions__icon_text">Лицензирование музыкального и видео контента</p>
+          </div>
+
+          <div class="directions__icon">
+            <div class="directions__icon_img">
+              <img src="./dist/img/directions-icon-3.svg"
+                   alt="img"
+                   loadeng="lazy">
+            </div>
+            <p class="directions__icon_text">Организация и проведение собственных концертов</p>
+          </div>
+
+          <div class="directions__icon">
+            <div class="directions__icon_img">
+              <img src="./dist/img/directions-icon-4.svg"
+                   alt="img"
+                   loadeng="lazy">
+            </div>
+            <p class="directions__icon_text">Юридическая поддержка и защита авторов</p>
+          </div>
+
+        </div>
+        <p class="directions__text">Основным направлением Компании изначально была помощь авторам в продвижении их творчества, восстановлении старых и забытых музыкальных материалов, перезапись и оцифровка огромного количества бумажных и магнитных носителей.
+          <br><br>
+          В дальнейшем это вытекло в защиту авторского права композиторов и лицензирование их материалов в случае использования третьими лицами. На сегодняшний день это и выпуск нотных сборников, и музыкальных авторских альбомов и концертные выступление.
+        </p>
+      </div>
+    </div>
+
+    <div class="container form">
+
+      <div class="form__info">
+        <p class="form__info_caption">напишите</p>
+        <p class="form__info_text">Если у вас есть вопросы или предложения свяжитесь с нами и вы получите оперативный ответ </p>
+        <a href="tel:+79013891858" class="form__info_link phone">+7 901 389 18 58</a>
+        <a href="mailto:mail@siouxmusic.ru" class="form__info_link email">mail@siouxmusic.ru</a>
+      </div>
+      <form action="#" class="form__form">
+        <div class="form__form_inputs">
+          <div class="form__field">
+            <label for="FName" class="form__field_label">
+              <input type="text"
+                     name="FName"
+                     id="FName"
+                     placeholder="как вас зовут?">
+            </label>
+          </div>
+          <div class="form__field">
+            <label for="email" class="form__field_label">
+              <input type="text"
+                     name="email"
+                     id="email"
+                     placeholder="e-mail">
+            </label>
+          </div>
+          <div class="form__field">
+            <label for="phone" class="form__field_label">
+              <input type="text"
+                     name="phone"
+                     id="phone"
+                     placeholder="телефон">
+            </label>
+          </div>
+        </div>
+        <div class="form__form_textarea">
+          <div class="form__field">
+            <label for="message" class="form__field_label">
+          <textarea name="message"
+                    id="message"
+                    placeholder="ваше сообщение"
+                    rows="1"></textarea>
+            </label>
+          </div>
+        </div>
+        <div class="form__form_footer">
+          <button class="btn">отправить</button>
+          <p class="form__form_note">Нажимая кнопку, вы соглашаетесь <br>с <a href="#" class="orange">Политикой обработки персональных данных</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
 </main>
 
-<footer class="container footer">
-
+<footer class="footer dark-bg">
+  <div class="container">
+    <p class="footer__copy">&copy; 2021 Shining Sioux Record</p>
+    <p class="footer__dev">Разработка сайта: <a href="https://hardwork.ru" class="bronze">hardwork.ru</a></p>
+  </div>
 </footer>
 
 </body>

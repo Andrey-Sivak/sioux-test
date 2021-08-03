@@ -1,0 +1,55 @@
+.home {
+
+  .btn.more {
+    width: 237px;
+    margin: 83px auto 75px;
+  }
+
+  &__text {
+    text-align: center;
+    padding-top: 50px;
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 170%;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &_text {
+      max-width: 676px;
+      width: 100%;
+      margin-right: 10px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 170%;
+      font-weight: 400;
+      font-family: Montserrat;
+
+      & .bold {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 130%;
+        font-family: Montserrat Alternates;
+      }
+    }
+
+    &_img {
+      margin-right: -87px;
+      margin-top: -45px;
+    }
+  }
+
+  &__main {
+    position: relative;
+
+    & .categories {
+      position: absolute;
+      bottom: calc(100% + 62px);
+      z-index: 1;
+    }
+  }
+}

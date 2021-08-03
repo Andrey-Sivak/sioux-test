@@ -44,6 +44,7 @@ body {
 }
 
 .btn {
+  font-family: Montserrat;
   background-color: $orange-color;
   text-align: center;
   color: #fff;
@@ -60,6 +61,16 @@ body {
 
   @include on-event {
     background-color: rgba(241, 100, 57, 0.7);
+  }
+
+  &.white {
+    background-color: #fff;
+    color: $dark-color;
+
+    @include on-event {
+      background-color: $orange-color;
+      color: #fff;
+    }
   }
 }
 
@@ -85,4 +96,8 @@ body {
 
 .bronze-bg {
   background-color: $bronze-color;
+}
+
+.dark-bg {
+  background-color: $dark-color;
 }

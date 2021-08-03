@@ -1,0 +1,42 @@
+.back {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include on-event {
+
+    .back__icon {
+      background-color: rgba(241, 100, 57, 0.7);
+    }
+
+    .back__text {
+      text-decoration: none;
+    }
+  }
+
+  &__text {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: right;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: $dark-color;
+    max-width: 110px;
+    margin-right: 18px;
+  }
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+    display: block;
+    background-color: $orange-color;
+    border-radius: 50%;
+    background-image: url('../../img/back-arrow.svg');
+    background-position: center;
+    background-size: initial;
+    background-repeat: no-repeat;
+    @include transition-ease;
+  }
+}

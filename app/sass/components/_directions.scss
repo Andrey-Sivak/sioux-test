@@ -1,0 +1,60 @@
+.directions {
+  padding-top: 80px;
+
+  &__caption {
+    font-family: Montserrat Alternates;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 100%;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.94);
+    margin-bottom: 18px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icons {
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    width: 49%;
+    margin-bottom: 38px;
+
+    &_img {
+      display: block;
+      margin-bottom: 16px;
+      width: 94px;
+      height: 75px;
+
+      & img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &_text {
+      font-size: 18px;
+      line-height: 150%;
+      color: $dark-color;
+      font-family: Montserrat;
+    }
+  }
+
+  &__text {
+    width: 49%;
+    color: $dark-color;
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 170%;
+    font-weight: 400;
+  }
+}
