@@ -11,6 +11,12 @@
   right: 84px;
   border-radius: 0 0 32px 32px;
   align-items: flex-end;
+  @include transition-ease;
+  opacity: 1;
+
+  &.hide {
+    opacity: 0;
+  }
 
   @include response-to(small) {
     display: flex;

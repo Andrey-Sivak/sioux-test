@@ -54,7 +54,9 @@ window.addEventListener('load', function () {
             e.preventDefault();
             this.classList.toggle('active');
             menu.classList.toggle('active');
-        })
+        });
+
+        btn.classList.remove('hide');
     })();
 
     (function form() {

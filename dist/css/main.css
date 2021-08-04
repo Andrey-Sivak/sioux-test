@@ -924,7 +924,12 @@ body {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
-          align-items: flex-end; }
+          align-items: flex-end;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  opacity: 1; }
+  .mob-menu-btn.hide {
+    opacity: 0; }
   @media (max-width: 767px) {
     .mob-menu-btn {
       display: -webkit-box;
