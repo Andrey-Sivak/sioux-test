@@ -21,6 +21,20 @@ window.addEventListener('load', function () {
         }
     })();
 
+    (function mobMenu() {
+        if (!document.querySelector('.mob-menu-btn')) {
+            return;
+        }
+        const btn = document.querySelector('.mob-menu-btn');
+        const menu = document.querySelector('.menu');
+
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            this.classList.toggle('active');
+            menu.classList.toggle('active');
+        })
+    })();
+
     (function form() {
         if (!document.querySelector('form')) {
             return;

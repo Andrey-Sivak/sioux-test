@@ -8,10 +8,20 @@
   margin-top: -200px;
   font-family: Montserrat;
 
+  @include response-to(small) {
+    height: 424px;
+    margin-top: -300px;
+    padding-bottom: 45px;
+  }
+
   &__copy {
     font-size: 18px;
     line-height: 150%;
     font-weight: 400;
+
+    @include response-to(small) {
+      font-size: 12px;
+    }
   }
 
   &__dev {

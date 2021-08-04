@@ -11,8 +11,24 @@
   align-items: flex-start;
   justify-content: space-between;
 
+  @include response-to(small) {
+    flex-wrap: wrap;
+    padding: 33px 21px 50px;
+    margin-top: 64px;
+  }
+
   &__info {
     max-width: 375px;
+
+    @include response-to(medium) {
+      max-width: 40%;
+    }
+
+    @include response-to(small) {
+      width: 100%;
+      margin-bottom: 40px;
+      max-width: unset;
+    }
 
     &_caption {
       margin-bottom: 30px;
@@ -21,6 +37,15 @@
       font-weight: 600;
       font-size: 60px;
       line-height: 100%;
+
+      @include response-to(medium) {
+        font-size: 40px;
+      }
+
+      @include response-to(small) {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
     }
 
     &_text {
@@ -29,6 +54,15 @@
       font-size: 18px;
       line-height: 170%;
       color: $dark-color;
+
+      @include response-to(medium) {
+        font-size: 16px;
+      }
+
+      @include response-to(small) {
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
     }
 
     &_link {
@@ -42,6 +76,10 @@
 
       @include on-event {
         text-decoration: underline;
+      }
+
+      @include response-to(small) {
+        font-size: 14px;
       }
 
       &:not(:last-of-type) {
@@ -70,12 +108,26 @@
     flex-wrap: wrap;
     padding-top: 28px;
 
+    @include response-to(small) {
+      width: 100%;
+      padding-top: 0;
+      margin-left: 0;
+    }
+
     &_inputs {
       width: 48%;
+
+      @include response-to(small) {
+        width: 100%;
+      }
     }
 
     &_textarea {
       width: 48%;
+
+      @include response-to(small) {
+        width: 100%;
+      }
     }
 
     &_footer {
@@ -83,9 +135,20 @@
       display: flex;
       align-items: center;
 
+      @include response-to(small) {
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+
       & .btn {
-        width: 134px;
+        min-width: 134px;
         margin-right: 36px;
+        width: 134px;
+
+        @include response-to(small) {
+          order: 2;
+          margin: 0 auto;
+        }
       }
     }
 
@@ -95,6 +158,20 @@
       color: $dark-color;
       font-size: 10px;
       line-height: 150%;
+
+      @include response-to(medium) {
+
+        br {
+          display: none;
+        }
+      }
+
+      @include response-to(small) {
+        width: 100%;
+        text-align: center;
+        max-width: 360px;
+        margin: 0 auto 27px;
+      }
 
       & a {
         text-decoration-line: underline;

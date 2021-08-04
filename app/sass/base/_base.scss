@@ -7,6 +7,14 @@ body {
   background-blend-mode: overlay;
   padding-top: 112px;
   scroll-behavior: smooth;
+
+  @include response-to(medium) {
+    padding-top: 50px;
+  }
+
+  @include response-to(small) {
+    padding-top: 27px;
+  }
 }
 
 .container {
@@ -15,8 +23,8 @@ body {
   margin: 0 auto;
 
   @include response-to(large) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

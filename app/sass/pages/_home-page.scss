@@ -3,6 +3,10 @@
   .btn.more {
     width: 237px;
     margin: 83px auto 75px;
+
+    @include response-to(large) {
+      margin-top: 10px;
+    }
   }
 
   &__text {
@@ -11,6 +15,11 @@
     font-family: Montserrat;
     font-size: 18px;
     line-height: 170%;
+
+    @include response-to(small) {
+      font-size: 12px;
+      padding-top: 40px;
+    }
   }
 
   &__content {
@@ -18,6 +27,12 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include response-to(small) {
+      flex-direction: column;
+      padding-top: 27px;
+      margin-bottom: 60px;
+    }
 
     &_text {
       max-width: 676px;
@@ -29,17 +44,56 @@
       font-weight: 400;
       font-family: Montserrat;
 
+      @include response-to(large) {
+        max-width: 49%;
+        margin-right: 0;
+      }
+
+      @include response-to(small) {
+        font-size: 12px;
+        order: 2;
+        text-align: center;
+        max-width: 400px;
+      }
+
       & .bold {
         font-weight: bold;
         font-size: 32px;
         line-height: 130%;
         font-family: Montserrat Alternates;
+
+        @include response-to(medium) {
+          font-size: 25px;
+        }
+
+        @include response-to(small) {
+          font-size: 18px;
+        }
       }
     }
 
     &_img {
       margin-right: -87px;
       margin-top: -45px;
+
+      & img {
+        max-width: 100%;
+      }
+
+      @media(max-width: 1400px) {
+        margin-right: 0;
+        margin-top: 0;
+      }
+
+      @include response-to(large) {
+        max-width: 49%;
+
+      }
+
+      @include response-to(small) {
+        max-width: 276px;
+        margin-bottom: 13px;
+      }
     }
   }
 
@@ -50,6 +104,11 @@
       position: absolute;
       bottom: calc(100% + 62px);
       z-index: 1;
+
+      @include response-to(small) {
+        position: static;
+        margin-bottom: 48px;
+      }
     }
   }
 }

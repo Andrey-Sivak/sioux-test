@@ -16,12 +16,20 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @include response-to(medium) {
+    justify-content: space-around;
+  }
 }
 
 .card {
   display: block;
   cursor: pointer;
   $width: 272px;
+
+  @include response-to(large) {
+    margin-bottom: 48px;
+  }
 
   width: $width;
 
@@ -90,6 +98,11 @@
       text-transform: uppercase;
       font-weight: 400;
       margin-bottom: 12px;
+
+      @include response-to(small) {
+        font-size: 12px;
+        margin-bottom: 9px;
+      }
     }
 
     &_title {
@@ -97,10 +110,18 @@
       font-size: 18px;
       text-transform: uppercase;
       margin-bottom: 5px;
+
+      @include response-to(small) {
+        font-size: 12px;
+      }
     }
 
     &_note {
       font-size: 14px;
+
+      @include response-to(small) {
+        font-size: 12px;
+      }
     }
   }
 }

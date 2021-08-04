@@ -6,12 +6,34 @@
   position: relative;
   flex-wrap: wrap;
 
+  @include response-to(large) {
+    justify-content: space-between;
+  }
+
+  @include response-to(small) {
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+
   .author {
     position: relative;
     z-index: 2;
     width: 282px;
     margin: 0 calc((100% - 282px * 4) / 8);
     display: block;
+
+    @include response-to(large) {
+      margin: 0;
+      width: 210px;
+    }
+
+    @include response-to(medium) {
+      margin-bottom: 40px;
+    }
+
+    @include response-to(small) {
+      width: 282px;
+    }
 
     &__desc {
       position: relative;
@@ -48,6 +70,14 @@
       max-width: 100%;
       @include flex-center();
 
+      @include response-to(large) {
+        height: 210px;
+      }
+
+      @include response-to(small) {
+        height: 282px;
+      }
+
       &_image {
         @include transition-ease;
         width: 100%;
@@ -77,6 +107,10 @@
     @media(min-width: 1200px) {
       left: calc((100vw - 1200px) / -2);
       right: calc((100vw - 1200px) / -2);
+    }
+
+    @include response-to(medium) {
+      display: none;
     }
 
     &:before {
@@ -110,12 +144,25 @@
     justify-content: space-between;
     width: 100%;
 
+    @include response-to(medium) {
+      margin-top: 0;
+    }
+
+    @include response-to(small) {
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
     &_text {
       font-weight: 600;
       font-size: 80px;
       line-height: 150%;
       font-family: Montserrat Alternates;
       color: #E8E8E8;
+
+      @include response-to(small) {
+        display: none;
+      }
     }
   }
 }

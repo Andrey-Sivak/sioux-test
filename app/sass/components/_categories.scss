@@ -12,10 +12,21 @@
   display: flex;
   align-items: center;
 
+  @include response-to(small) {
+    justify-content: space-between;
+  }
+
   &__item {
     font-family: Montserrat Alternates;
     display: flex;
     align-items: center;
+
+    &_icon {
+
+      @include response-to(small) {
+        display: none;
+      }
+    }
 
     &_text {
       margin-left: 5px;
@@ -24,6 +35,10 @@
       color: #fff;
       font-weight: 400;
       position: relative;
+
+      @include response-to(small) {
+        margin-left: 0;
+      }
 
       &:before {
         position: absolute;
@@ -46,11 +61,26 @@
     }
 
     &.active {
-      color: $bronze-color;
+
+      .categories__item_text {
+        color: $bronze-color;
+
+        @include response-to(small) {
+          color: #fff;
+
+          &:before {
+            width: 100%;
+          }
+        }
+      }
     }
 
     &:not(:last-of-type) {
       margin-right: 35px;
+
+      @include response-to(small) {
+        margin-right: 0;
+      }
     }
   }
 }

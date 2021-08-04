@@ -1,5 +1,110 @@
+.mob-menu-btn {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  height: 68px;
+  cursor: pointer;
+  width: 42px;
+  padding: 15px 11px 13px;
+  //right: calc((100vw - 360px) / 2 + 84px);
+  right: 84px;
+  border-radius: 0 0 32px 32px;
+  align-items: flex-end;
+
+  @include response-to(small) {
+    display: flex;
+  }
+
+  &.active {
+    background-color: transparent;
+    padding-bottom: 9px;
+
+    .mob-menu-btn__burger {
+      height: 24px;
+      width: 2px;
+      margin-bottom: 0;
+      margin-left: 7px;
+
+      &:before,
+      &:after {
+        height: 24px;
+        width: 2px;
+        transform: translateX(0) translateY(-50%);
+        top: 50%;
+      }
+
+      &:after {
+        right: -9px;
+        left: unset;
+      }
+
+      &:before {
+        left: -9px;
+      }
+    }
+  }
+
+  &__burger {
+    display: block;
+    height: 2px;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 7px;
+    position: relative;
+    @include transition-ease;
+
+    &:before,
+    &:after {
+      position: absolute;
+      height: 2px;
+      content: '';
+      background-color: #fff;
+      width: 100%;
+      left: 50%;
+      top: unset;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    &:before {
+      top: -7px;
+    }
+
+    &:after {
+      bottom: -7px;
+    }
+  }
+}
+
 .menu {
   width: 100%;
+
+  @include response-to(small) {
+    position: fixed;
+    background: #BEA479;
+    top: 0;
+    right: 0;
+    max-width: 265px;
+    width: 100%;
+    height: 200px;
+    z-index: -1000;
+    border-bottom-left-radius: 30px;
+    opacity: 0;
+    @include transition-ease;
+    padding-top: 75px;
+    padding-right: 75px;
+    transform: translate(100vw, -100vw);
+
+    &.active {
+      opacity: .95;
+      z-index: 900;
+      transform: translate(0, 0);
+
+      & .menu__item {
+        transform: translateX(0);
+      }
+    }
+  }
 
   &__wrap {
     margin: 0 auto;
@@ -8,9 +113,20 @@
     justify-content: space-between;
     max-width: 600px;
     width: 100%;
+
+    @include response-to(small) {
+      flex-wrap: wrap;
+      text-align: right;
+    }
   }
 
   &__item {
+
+    @include response-to(small) {
+      width: 100%;
+      transform: translateX(100vw);
+      @include transition-ease;
+    }
 
     &_link {
       padding: 10px 0;
@@ -26,6 +142,12 @@
         text-decoration: underline;
         color: $orange-color;
       }
+
+      @include response-to(small) {
+        padding: 7px 0;
+        font-size: 14px;
+        text-align: right;
+      }
     }
 
     &.active {
@@ -34,5 +156,11 @@
         color: $bronze-color;
       }
     }
+  }
+}
+
+@for $i from 1 through 5 {
+  .menu__item:nth-child(#{$i}) {
+    transition-delay: ( $i * .1s ) + 0.15s;
   }
 }
