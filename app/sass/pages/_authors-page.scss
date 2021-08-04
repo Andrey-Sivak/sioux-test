@@ -1,8 +1,20 @@
 .authors-page {
 
+  @include response-to(small) {
+
+    .header {
+      margin-bottom: 15px;
+    }
+  }
+
   .white-bg {
     padding-top: 75px;
     padding-bottom: 90px;
+
+    @include response-to(small) {
+      padding-top: 15px;
+      padding-bottom: 0;
+    }
   }
 
   &__caption {
@@ -22,6 +34,11 @@
       font-family: Montserrat Alternates;
       padding: 0 30px;
       background-color: #fff;
+
+      @include response-to(small) {
+        font-size: 22px;
+        padding: 0 20px;
+      }
     }
 
     &_decor {
@@ -36,6 +53,12 @@
       border-top: 2px solid $orange-color;
       border-bottom: 2px solid $orange-color;
 
+      @include response-to(small) {
+        border-bottom: 1px solid $orange-color;
+        border-top: 1px solid $orange-color;
+        height: 6px;
+      }
+
       &:before {
         box-sizing: border-box;
         display: block;
@@ -47,6 +70,13 @@
         border-bottom: 2px solid $orange-color;
         content: '';
         top: calc(100% + 7px);
+
+        @include response-to(small) {
+          border-bottom: 1px solid $orange-color;
+          border-top: 1px solid $orange-color;
+          height: 6px;
+          top: calc(100% + 5px);
+        }
       }
 
       &:after {
@@ -59,6 +89,11 @@
         right: 0;
         height: 2px;
         background-color: $orange-color;
+
+        @include response-to(small) {
+          height: 1px;
+          top: -6px;
+        }
       }
     }
   }

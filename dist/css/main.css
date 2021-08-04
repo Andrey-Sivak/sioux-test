@@ -749,13 +749,11 @@ body {
   position: relative;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-  @media (max-width: 1230px) {
-    .authors {
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between; } }
+          flex-wrap: wrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
   @media (max-width: 767px) {
     .authors {
       -webkit-justify-content: space-around;
@@ -770,13 +768,14 @@ body {
     display: block; }
     @media (max-width: 1230px) {
       .authors .author {
-        margin: 0;
+        margin: 0 calc((100% - 210px * 4) / 8);
         width: 210px; } }
     @media (max-width: 992px) {
       .authors .author {
         margin-bottom: 40px; } }
     @media (max-width: 767px) {
       .authors .author {
+        margin: 0 auto;
         width: 282px; } }
     .authors .author__desc {
       position: relative;
@@ -1742,9 +1741,17 @@ body {
             justify-content: space-around;
     margin-top: 23px; } }
 
+@media (max-width: 767px) {
+  .authors-page .header {
+    margin-bottom: 15px; } }
+
 .authors-page .white-bg {
   padding-top: 75px;
   padding-bottom: 90px; }
+  @media (max-width: 767px) {
+    .authors-page .white-bg {
+      padding-top: 15px;
+      padding-bottom: 0; } }
 
 .authors-page__caption {
   position: relative;
@@ -1764,6 +1771,10 @@ body {
     font-family: Montserrat Alternates;
     padding: 0 30px;
     background-color: #fff; }
+    @media (max-width: 767px) {
+      .authors-page__caption_text {
+        font-size: 22px;
+        padding: 0 20px; } }
   .authors-page__caption_decor {
     z-index: 0;
     top: 50%;
@@ -1777,6 +1788,11 @@ body {
     height: 9px;
     border-top: 2px solid #F16439;
     border-bottom: 2px solid #F16439; }
+    @media (max-width: 767px) {
+      .authors-page__caption_decor {
+        border-bottom: 1px solid #F16439;
+        border-top: 1px solid #F16439;
+        height: 6px; } }
     .authors-page__caption_decor:before {
       box-sizing: border-box;
       display: block;
@@ -1788,6 +1804,12 @@ body {
       border-bottom: 2px solid #F16439;
       content: '';
       top: calc(100% + 7px); }
+      @media (max-width: 767px) {
+        .authors-page__caption_decor:before {
+          border-bottom: 1px solid #F16439;
+          border-top: 1px solid #F16439;
+          height: 6px;
+          top: calc(100% + 5px); } }
     .authors-page__caption_decor:after {
       top: -9px;
       content: '';
@@ -1798,5 +1820,9 @@ body {
       right: 0;
       height: 2px;
       background-color: #F16439; }
+      @media (max-width: 767px) {
+        .authors-page__caption_decor:after {
+          height: 1px;
+          top: -6px; } }
 
 /*# sourceMappingURL=main.css.map */

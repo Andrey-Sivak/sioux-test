@@ -5,10 +5,7 @@
   margin-bottom: 90px;
   position: relative;
   flex-wrap: wrap;
-
-  @include response-to(large) {
-    justify-content: space-between;
-  }
+  align-items: flex-end;
 
   @include response-to(small) {
     justify-content: space-around;
@@ -23,7 +20,7 @@
     display: block;
 
     @include response-to(large) {
-      margin: 0;
+      margin: 0 calc((100% - 210px * 4) / 8);
       width: 210px;
     }
 
@@ -32,6 +29,7 @@
     }
 
     @include response-to(small) {
+      margin: 0 auto;
       width: 282px;
     }
 
