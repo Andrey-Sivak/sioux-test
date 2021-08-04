@@ -154,6 +154,10 @@
 
       & .menu__item_link {
         color: $bronze-color;
+
+        @include response-to(small) {
+          color: $orange-color;
+        }
       }
     }
   }

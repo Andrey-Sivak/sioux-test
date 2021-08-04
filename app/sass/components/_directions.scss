@@ -82,7 +82,7 @@
       font-family: Montserrat;
 
       @include response-to(small) {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   }
@@ -97,7 +97,7 @@
 
     @include response-to(small) {
       width: 100%;
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }

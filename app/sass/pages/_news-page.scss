@@ -1,0 +1,27 @@
+.news-page {
+
+  .btn.more {
+    display: none;
+
+    @include response-to(small) {
+      display: block;
+      width: 237px;
+      margin: 0 auto;
+    }
+  }
+
+  .card.hide {
+
+    @include response-to(small) {
+      display: none;
+    }
+  }
+
+  .categories {
+
+    @include response-to(small) {
+      justify-content: space-around;
+      margin-top: 23px;
+    }
+  }
+}

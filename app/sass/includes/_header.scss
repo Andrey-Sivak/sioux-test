@@ -2,6 +2,7 @@
   position: absolute;
   z-index: 100;
   right: 20px;
+  opacity: 1;
   top: 0;
   border-radius: 0px 0px 32px 32px;
   padding: 0 18px 14px 14px;
@@ -21,9 +22,11 @@
     height: 68px;
     padding: 0 12px 10px 9px;
     width: 42px;
-    //right: calc((100vw - 360px) / 2 + 20px);
   }
 
+  &.hide {
+    opacity: 0;
+  }
 
   & .hover {
     min-width: 100%;
