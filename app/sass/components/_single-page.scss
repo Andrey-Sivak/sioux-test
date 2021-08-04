@@ -1,9 +1,23 @@
+.single {
+
+  @include response-to(small) {
+
+    .header {
+      margin-bottom: 15px;
+    }
+  }
+}
+
 .page-header {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: flex-start;
   margin-bottom: 61px;
+
+  @include response-to(small) {
+    margin-bottom: 30px;
+  }
 
   &__caption {
     max-width: 740px;
@@ -12,12 +26,32 @@
     font-weight: bold;
     font-size: 45px;
     line-height: 130%;
+
+    @include response-to(medium) {
+      font-size: 30px;
+    }
+
+    @include response-to(small) {
+      font-size: 22px;
+    }
+  }
+
+  .back {
+
+    @include response-to(small) {
+      display: none;
+    }
   }
 }
 
 .single-page-content {
   padding-top: 67px;
   padding-bottom: 100px;
+
+  @include response-to(small) {
+    padding-top: 25px;
+    padding-bottom: 44px;
+  }
 }
 
 .page-content {
@@ -26,12 +60,26 @@
   justify-content: space-between;
   align-items: flex-start;
 
+  @include response-to(small) {
+    flex-wrap: wrap;
+  }
+
   &__text {
     max-width: 565px;
     width: 100%;
     font-family: Montserrat;
     margin-right: 30px;
     font-size: 16px;
+
+    @include response-to(medium) {
+      width: 70%;
+    }
+
+    @include response-to(small) {
+      width: 100%;
+      order: 2;
+      font-size: 14px;
+    }
 
     &_text {
       margin-bottom: 15px;
@@ -66,6 +114,14 @@
     position: relative;
     padding-bottom: 140px;
 
+    @include response-to(small) {
+      width: calc(100% + 40px);
+      margin-right: -20px;
+      margin-left: -20px;
+      padding-bottom: 52px;
+      margin-bottom: 38px;
+    }
+
     & img {
       width: 100%;
     }
@@ -83,16 +139,32 @@
         right: calc((100vw - 1200px) / -2);
       }
 
+      @include response-to(small) {
+        border-bottom: 1px solid $orange-color;
+        border-top: 1px solid $orange-color;
+        height: 12px;
+      }
+
       &:before {
         box-sizing: border-box;
         border-bottom: 2px solid $orange-color;
         height: 24px;
         top: -66px;
+
+        @include response-to(small) {
+          border-bottom: 1px solid $orange-color;
+          height: 12px;
+          top: -34px;
+        }
       }
 
       &:after {
         height: 0px;
         top: -24px;
+
+        @include response-to(small) {
+          top: -12px;
+        }
       }
 
       &:after,
@@ -101,6 +173,10 @@
         position: absolute;
         width: 100%;
         border-top: 2px solid $orange-color;
+
+        @include response-to(small) {
+          border-top: 1px solid $orange-color;
+        }
       }
     }
   }
@@ -108,12 +184,30 @@
 
 .page-lists {
   margin-top: 64px;
+
+  @include response-to(small) {
+    margin-top: 30px;
+  }
+
+  & + .back {
+    display: none;
+
+    @include response-to(small) {
+      display: flex;
+      margin: 33px auto 0;
+      width: fit-content;
+    }
+  }
 }
 
 .page-list {
   border: 3px solid #BEA479;
   padding: 27px 25px 27px 40px;
   margin-bottom: 22px;
+
+  @include response-to(small) {
+    padding: 26px 23px;
+  }
 
   &.active {
 
@@ -131,6 +225,23 @@
     .page-list__body {
       max-height: 1000px;
       opacity: 1;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+        padding: 2px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $bronze-color;
+        border-radius: 20px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border-radius: 20px;
+        border: 2px solid $bronze-color;
+      }
     }
 
     .page-list__item {
@@ -154,7 +265,12 @@
       color: $dark-color;
       position: relative;
 
-      &:before {
+      @include response-to(small) {
+        font-size: 16px;
+      }
+
+      &:before,
+      &:after {
         position: absolute;
         content: '';
         right: 0;
@@ -162,25 +278,30 @@
         transform: translateY(-50%);
         width: 44px;
         height: 44px;
+
+        @include response-to(small) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &:before {
         background-color: $bronze-color;
         border-radius: 50%;
         z-index: 1;
       }
 
       &:after {
-        position: absolute;
-        content: '';
-        width: 44px;
-        height: 44px;
-        top: 50%;
-        transform: translateY(-50%);
         z-index: 2;
-        right: 0;
         background-image: url('../../img/list-header-show.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: initial;
         @include transition-ease;
+
+        @include response-to(small) {
+          background-size: contain;
+        }
       }
     }
   }
@@ -193,6 +314,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     overflow: hidden;
+
+    @include response-to(small) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
@@ -207,5 +332,9 @@
     transition-property: max-height, padding-bottom;
     transition-delay: .3s;
     transition-timing-function: ease-in;
+
+    @include response-to(small) {
+      width: 100%;
+    }
   }
 }
