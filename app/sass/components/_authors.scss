@@ -29,8 +29,8 @@
     }
 
     @include response-to(small) {
-      margin: 0 auto;
       width: 282px;
+      margin: 0 auto 40px;
     }
 
     &__desc {

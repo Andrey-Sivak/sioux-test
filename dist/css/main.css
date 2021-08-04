@@ -775,8 +775,8 @@ body {
         margin-bottom: 40px; } }
     @media (max-width: 767px) {
       .authors .author {
-        margin: 0 auto;
-        width: 282px; } }
+        width: 282px;
+        margin: 0 auto 40px; } }
     .authors .author__desc {
       position: relative;
       font-family: Montserrat;
