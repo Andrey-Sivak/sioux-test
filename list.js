@@ -8,6 +8,11 @@
     lists.forEach(l => {
         const list = l.querySelector('.page-list__body');
         const items = [...list.children];
+
+        if (items.length < 15) {
+            return;
+        }
+
         const listHeader = l.querySelector('.page-list__header');
 
         listHeader.addEventListener('click', function (e) {

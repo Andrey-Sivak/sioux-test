@@ -64,6 +64,16 @@
     flex-wrap: wrap;
   }
 
+  & + .back {
+    display: none;
+
+    @include response-to(small) {
+      display: flex;
+      margin: 33px auto 0;
+      width: fit-content;
+    }
+  }
+
   &__text {
     max-width: 565px;
     width: 100%;
@@ -96,9 +106,18 @@
       align-items: center;
       margin-top: 50px;
 
+      @include response-to(small) {
+        flex-wrap: wrap;
+      }
+
       & .btn {
         min-width: 121px;
         margin-right: 20px;
+
+        @include response-to(small) {
+          order: 2;
+          margin: 20px auto 50px;
+        }
       }
     }
 
@@ -106,6 +125,13 @@
       font-weight: normal;
       font-size: 16px;
       font-family: Montserrat;
+
+      @include response-to(small) {
+        font-size: 12px;
+        text-align: center;
+        max-width: 309px;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -213,6 +239,10 @@
 
     .page-list__header {
       margin-bottom: 49px;
+
+      @include response-to(small) {
+        margin-bottom: 18px;
+      }
 
       &_text {
 

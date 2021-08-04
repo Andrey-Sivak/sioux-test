@@ -1147,6 +1147,18 @@ body {
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; } }
+  .page-content + .back {
+    display: none; }
+    @media (max-width: 767px) {
+      .page-content + .back {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 33px auto 0;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content; } }
   .page-content__text {
     max-width: 565px;
     width: 100%;
@@ -1180,13 +1192,31 @@ body {
           -ms-flex-align: center;
               align-items: center;
       margin-top: 50px; }
+      @media (max-width: 767px) {
+        .page-content__text_order {
+          -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap; } }
       .page-content__text_order .btn {
         min-width: 121px;
         margin-right: 20px; }
+        @media (max-width: 767px) {
+          .page-content__text_order .btn {
+            -webkit-box-ordinal-group: 3;
+            -webkit-order: 2;
+                -ms-flex-order: 2;
+                    order: 2;
+            margin: 20px auto 50px; } }
     .page-content__text_note {
       font-weight: normal;
       font-size: 16px;
       font-family: Montserrat; }
+      @media (max-width: 767px) {
+        .page-content__text_note {
+          font-size: 12px;
+          text-align: center;
+          max-width: 309px;
+          margin: 0 auto; } }
   .page-content__img {
     max-width: 588px;
     position: relative;
@@ -1268,6 +1298,9 @@ body {
       padding: 26px 23px; } }
   .page-list.active .page-list__header {
     margin-bottom: 49px; }
+    @media (max-width: 767px) {
+      .page-list.active .page-list__header {
+        margin-bottom: 18px; } }
     .page-list.active .page-list__header_text:after {
       -webkit-transform: rotate(45deg) translateY(-37%) translateX(-36%);
           -ms-transform: rotate(45deg) translateY(-37%) translateX(-36%);
